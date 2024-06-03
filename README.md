@@ -9,7 +9,6 @@ This is a simple weather forecast application that allows users to check the cur
 - [Usage](#usage)
 - [API Used](#api-used)
 - [Credits](#credits)
-- [License](#license)
 
 ## Features
 
