@@ -1,9 +1,3 @@
-/**
- * @license MIT
- * @copyright codewithsadee 2023 All rights reserved
- * @author codewithsadee <mohammadsadee24@gmail.com>
- */
-
 "use-strict";
 
 import { fetchData, url } from "./api.js";
@@ -405,4 +399,8 @@ export const updateWeather = function (lat, lon) {
 
 export const error404 = function () {
   errorContent.style.display = "flex";
+  let btn = document.querySelector(".op");
+  btn.addEventListener("click", () => {
+    errorContent.style.display = "none";
+  });
 };

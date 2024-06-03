@@ -2,7 +2,7 @@
 
 import { updateWeather, error404 } from "./app.js";
 
-const defaultLocation = "#/weather?lat=51.5073219&lon=-0.1276474"; // London
+const defaultLocation = "#/weather?lat=51.5073219&lon=-0.1276474";
 
 const currentLocation = function () {
   window.navigator.geolocation.getCurrentPosition(
@@ -17,7 +17,20 @@ const currentLocation = function () {
 };
 
 const searchedLocation = (query) => {
-  updateWeather(...query.split("&"));
+  const params = query.split("&");
+  if (
+    params.length === 2 &&
+    params[0].startsWith("lat=") &&
+    params[1].startsWith("lon=")
+  ) {
+    const lat = params[0].split("=")[1];
+    const lon = params[1].split("=")[1];
+    if (!isNaN(lat) && !isNaN(lon)) {
+      updateWeather(...params);
+      return;
+    }
+  }
+  error404();
 };
 
 const routes = new Map([
@@ -27,6 +40,7 @@ const routes = new Map([
 
 const checkHash = function () {
   const requestedUrl = window.location.hash.slice(1);
+
   const [route, query] = requestedUrl.includes("?")
     ? requestedUrl.split("?")
     : [requestedUrl];

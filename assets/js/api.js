@@ -1,10 +1,3 @@
-/**
- * @license MIT
- * @fileoverview All api related stuff like api_key, api request etc.
- * @copyright Mohammad 2023 All rights reserved
- * @author Mohammad Houda <muhamad.houda@gmail.com>
- */
-
 "use strict";
 
 const api_key = "3363fd88b93bfe9a7adf1f3fb4cdd8c1";
