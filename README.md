@@ -42,5 +42,4 @@ This application utilizes the [OpenWeather API](https://openweathermap.org/api) 
 
 ## Credits
 
-- Developed by Mohammad Houda ([GitHub](https://github.com/mohammadhouda))
 - Weather icons provided by [OpenWeather](https://openweathermap.org/weather-conditions)
