@@ -1,6 +1,9 @@
 "use strict";
+import config from "./config.js";
 
-const api_key = "3363fd88b93bfe9a7adf1f3fb4cdd8c1";
+const api_key = config.apiKey;
+
+console.log(api_key);
 
 /**
  *
