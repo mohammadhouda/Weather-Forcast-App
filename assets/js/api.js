@@ -3,8 +3,6 @@ import config from "./config.js";
 
 const api_key = config.apiKey;
 
-console.log(api_key);
-
 /**
  *
  * @param {string} URL API URL
